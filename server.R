@@ -40,7 +40,7 @@ shinyServer(function(input, output) {
         g <- g+geom_line(colour = "gold",size = 1);
         g <- g + xlab("") +ylab("Price of APPLE($)") + ggtitle("Stock price of Apple");
         price <- input$price;
-        isolate(g <- g+ geom_hline(yintercept = price, color = "black",lintype = "dashed"));
+        g <- g+ geom_hline(yintercept = price, color = "black",lintype = "dashed");
         print(g)})
     })
 
@@ -64,7 +64,7 @@ shinyServer(function(input, output) {
         g <- g+geom_line(colour = "gold",size = 1);
         g <- g + xlab("") +ylab("Price of Gilead Science($)") + ggtitle("Stock price of Gilead");
         price <- input$price;
-        isolate(g <- g +geom_hline(yintercept = price, color = "black",lintype = "dashed"));
+        g <- g +geom_hline(yintercept = price, color = "black",lintype = "dashed");
         print(g)})
     })
 })
