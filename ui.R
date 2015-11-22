@@ -22,7 +22,14 @@ shinyUI(pageWithSidebar(
         dateRangeInput(inputId = "daterange", label = "Date range",
                        start = Sys.Date() - 730, end = Sys.Date()),
         #add a interactive "go!" button 
-        actionButton("goButton","Go!")
+        actionButton("goButton","Go!"),
+        
+        #Documentaion about how to apply this app
+        h2('Instructions:'),
+        h4('1, check the box to select stocks which you are interested in'),
+        h4('2, slide the slider to a price you like'),
+        h4('3, slect a date range'),
+        h4('4, Go click and see what happens!')
         ),
     
     
