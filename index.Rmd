@@ -1,0 +1,58 @@
+---
+title       : Developing-data-products 
+subtitle    : Introduce to the shinyapp I create
+author      : Wang
+job         : Penn State
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Outline
+
+1, what I do
+
+I make a shinyApp with interative interface by using shiny package. THe shinyApp is about how to check stock price in a time range.
+
+
+2. origin of data
+
+I select three stocks: AAPL, GLID and NFLX. The data is loaded through package "quantmod" from yahoo!
+
+3, shinyApp interface
+
+The interface includes checkboxs, textboxs, a radio button and a slider
+
+--- .class #id 
+
+## Plot of stock price vs. time 
+This slide is used to show that how a stock price(Here I use AAPL for an example) evolves as time
+```{r echo= TRUE,results=FALSE,cache = FALSE}
+library(png); localPNG <- readPNG("./stock1.png");plot(1)
+rasterImage(localPNG, 0.6, 0.6, 1.4, 1.4)
+```
+
+
+--- .class #id 
+
+## Plot of stock price vs. time with a slider to change the price
+This plot is to show that I add a slider to indicates the price.
+```{r echo= TRUE,results=FALSE,cache = FALSE}
+library(png); localPNG <- readPNG("./stock2.png");plot(1)
+rasterImage(localPNG, 0.6, 0.6, 1.4, 1.4)
+```
+
+
+--- .class #id 
+
+## Interface of shinyApp
+Check the link to play around the interactive shinyapp: https://gavin0wang.shinyapps.io/Develop-Data-Product
+
+```{r echo = TRUE, results = FALSE, cache= FALSE}
+library(png);localPNG <- readPNG("./stock.png");plot(1)
+rasterImage(localPNG, 0.6, 0.6, 1.4, 1.4)
+```
+
